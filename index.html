@@ -3,80 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pranathi's Portfolio</title>
+  <title>Pranathi | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary-color: #1F2937;
-      --accent-color: #3B82F6;
-      --alt-accent-color: #14B8A6;
-      --background-color: #F3F4F6;
-      --text-color: #111827;
+      --primary: #0f172a;
+      --accent: #3b82f6;
+      --accent-alt: #14b8a6;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
+
+    /* ---------- HEADER ---------- */
     header {
-      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary), #020617);
+      color: #fff;
       text-align: center;
-      background-color: var(--primary-color);
-      color: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 3rem 1.5rem;
     }
+
     header img {
-      max-width: 100px;
-      height: auto;
-      display: block;
-      margin: 0 auto 1rem;
+      width: 90px;
+      margin-bottom: 1rem;
     }
+
     header h1 {
       margin: 0;
+      font-size: 2.4rem;
+      font-weight: 700;
     }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #cbd5f5;
+    }
+
+    /* ---------- NAV ---------- */
     nav {
-      background: white;
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      z-index: 100;
     }
+
     nav a {
-      margin: 0 1rem;
       text-decoration: none;
-      color: var(--primary-color);
-      font-weight: bold;
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      position: relative;
     }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- MAIN ---------- */
     main {
-      padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
+      padding: 3rem 1.5rem;
     }
+
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
+
     h2 {
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.5rem;
-      color: var(--primary-color);
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      border-left: 5px solid var(--accent);
+      padding-left: 0.75rem;
     }
+
+    /* ---------- CARDS ---------- */
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      margin-bottom: 1.2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.7rem;
+    }
+
     a {
-      color: var(--accent-color);
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- SKILLS GRID ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+
+    /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: var(--primary-color);
-      color: white;
+      padding: 1.2rem;
+      background: var(--primary);
+      color: #cbd5f5;
       font-size: 0.9rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
-    <img src="SNP.png" alt="Pranathi Logo" />
-    <h1>Pranathi's Portfolio</h1>
+    <img src="SNP.png" alt="Pranathi Logo">
+    <h1>Naga Pranathi Siriyapuraju</h1>
+    <p>Computer Science Undergraduate | Data Science Enthusiast</p>
   </header>
 
+  <!-- NAV -->
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -85,75 +191,98 @@
     <a href="#resume">Resume</a>
     <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
-    <a href="#social">Social Media</a>
   </nav>
 
+  <!-- MAIN -->
   <main>
+
     <section id="home">
       <h2>Home</h2>
-      <p>Hi, I'm Naga Pranathi Siriyapuraju, a Computer Science Undergraduate and a Data Science enthusiast, and welcome to my personal portfolio website.
-</p>
+      <div class="card">
+        Hi, I'm a Computer Science undergraduate passionate about solving real-world problems using data, analytics, and machine learning.
+      </div>
     </section>
 
     <section id="about">
       <h2>About Me</h2>
-      <p>I'm a Computer Science undergrad passionate about data-driven problem solving, with hands-on experience in
-Python, Data Visualization, and Machine Learning. I'm actively seeking opportunities to apply analytical skills to
-real-world challenges through impactful data science projects.
-</p>
+      <div class="card">
+        I specialize in data-driven problem solving with hands-on experience in Python, Machine Learning, and Data Visualization. I'm actively seeking opportunities to contribute to impactful data science projects.
+      </div>
     </section>
 
     <section id="projects">
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>Highest Grossing Movies Data Analysis:</strong> A data analysis project, implemented in Python, focused on identifying trends and insights from the highest-grossing films dataset. <a href="https://github.com/psiriyapuraju/Data-Analysis-on-Top-Movies" target="_blank">View on GitHub</a></li>
-    <li><strong>Hangman Game:</strong> A classic word-guessing game implemented in Java, where the player tries to guess a hidden word by suggesting letters within a limited number of attempts. <a href="https://github.com/psiriyapuraju/Hangman-Game" target="_blank">View on GitHub</a></li>
-    <li><strong>Spotify Data Analysis:</strong> An exploratory data analysis project using R to uncover insights from Spotify’s music dataset. <a href="https://github.com/psiriyapuraju/Data-Analysis-of-Spotify-Most-Played-Songs" target="_blank">View on GitHub</a></li>
-    <li><strong>OptiCrop:</strong> An ML-based app providing intelligent crop recommendations based on soil and weather data. <a href="https://github.com/psiriyapuraju/OptiCrop" target="_blank">View on GitHub</a></li>
-  </ul>
-</section>
+      <h2>Projects</h2>
+
+      <div class="card">
+        <strong>Highest Grossing Movies Data Analysis</strong><br>
+        Python-based analysis uncovering trends in global box-office data.
+        <br><a href="https://github.com/psiriyapuraju/Data-Analysis-on-Top-Movies" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <strong>Hangman Game</strong><br>
+        Java-based word guessing game with clean logic and OOP design.
+        <br><a href="https://github.com/psiriyapuraju/Hangman-Game" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <strong>Spotify Data Analysis</strong><br>
+        Exploratory analysis using R to derive insights from music trends.
+        <br><a href="https://github.com/psiriyapuraju/Data-Analysis-of-Spotify-Most-Played-Songs" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <strong>OptiCrop</strong><br>
+        ML-based crop recommendation system using soil & weather data.
+        <br><a href="https://github.com/psiriyapuraju/OptiCrop" target="_blank">View on GitHub →</a>
+      </div>
+    </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Programming Languages:</strong> Python, C/C++, Java, R, MATLAB, SQL</li>
-        <li><strong>Web Development:</strong> HTML, JavaScript</li>
-        <li><strong>Python Libraries:</strong> NumPy, Pandas, Matplotlib, SciPy, SkikitLearn</li>
-        <li><strong>Tools:</strong> Linux, Word, Excel, PowerPoint, Overleaf (LaTeX)</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="card"><strong>Languages</strong><br>Python, C/C++, Java, R, MATLAB, SQL</div>
+        <div class="card"><strong>Web</strong><br>HTML, JavaScript</div>
+        <div class="card"><strong>Libraries</strong><br>NumPy, Pandas, Matplotlib, SciKit-Learn</div>
+        <div class="card"><strong>Tools</strong><br>Linux, Excel, PowerPoint, LaTeX</div>
+      </div>
     </section>
 
     <section id="resume">
       <h2>Resume</h2>
-      <p><a href="NagaPranathiSiriyapuraju.pdf" target="_blank">Click here to view my resume (PDF)</a></p>
+      <div class="card">
+        <a href="Naga_Pranathi_Siriyapuraju.pdf" target="_blank">📄 View Resume (PDF)</a>
+      </div>
     </section>
 
     <section id="achievements">
       <h2>Achievements & Certifications</h2>
-      <ul>
-        <li>My venture, <strong>Toddlers</strong>, was recognized by faculty and industry experts as a high-potential startup idea under the Wadhwani Entrepreneurship Network. I was offered incubation support, mentorship, and resources to help scale the concept. Although I couldn't pursue it further due to personal reasons, the experience validated the strength of my idea and entrepreneurial mindset.</li>
-	<li>I successfully completed the <strong>Machine Learning Certification offered by SmartBridge & Google for Developers </strong>, where I gained practical exposure to data preprocessing, supervised and unsupervised learning, and model evaluation techniques. The program emphasized industry-relevant applications, and I worked on hands-on OptiCrop Machine Learning project that strengthened my ability to build and deploy predictive models.<a href="SmartBridge.pdf" target="_blank">View it here</a></li>
-
-      </ul>
+      <div class="card">
+        <ul>
+          <li><strong>Toddlers Startup Idea</strong> recognized under Wadhwani Entrepreneurship Network.
+	    <a href="Toddlers.png" target="_blank">View Certificate</a>
+	  </li>
+          <li><strong>Machine Learning Certification</strong> by SmartBridge & Google for Developers.
+            <a href="ML.pdf" target="_blank">View Certificate</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>You can reach me at: <a href="mailto:psiriyapuraju@gmail.com">psiriyapuraju@gmail.com</a></p>
+      <div class="card">
+        📧 <a href="mailto:psiriyapuraju@gmail.com" target="_blank">psiriyapuraju@gmail.com</a><br>
+        🔗 <a href="https://linkedin.com/in/naga-pranathi-siriyapuraju-147961280" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/psiriyapuraju" target="_blank">GitHub</a>
+      </div>
     </section>
 
-    <section id="social">
-      <h2>Social Media</h2>
-      <ul>
-        <li><a href="mailto:psiriyapuraju@gmail.com">Email</a></li>
-        <li><a href="https://linkedin.com/in/naga-pranathi-siriyapuraju-147961280" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/psiriyapuraju" target="_blank">GitHub</a></li>
-      </ul>
-    </section>
   </main>
 
   <footer>
-    &copy; 2025 Pranathi. All rights reserved.
+    © 2026 Pranathi. All rights reserved.
   </footer>
+
 </body>
 </html>
