@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naga Pranathi Siriyapuraju</title>
+  <title>Naga Pranathi Siriyapuraju's Portfolio</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,29 +31,81 @@
       line-height: 1.7;
     }
 
-    /* ---------- HEADER ---------- */
+/* ---------- HEADER ---------- */
     header {
       background: linear-gradient(135deg, var(--primary), #020617);
       color: #fff;
-      text-align: center;
-      padding: 3rem 1.5rem;
+      padding: 3.5rem 1.5rem;
     }
 
-    header img {
-      width: 90px;
-      margin-bottom: 1rem;
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
     }
 
-    header h1 {
+    .header-text {
+      text-align: left;
+      flex: 1;
+    }
+
+    .header-text h1 {
       margin: 0;
       font-size: 2.4rem;
       font-weight: 700;
     }
 
-    header p {
+    .header-text p {
       margin-top: 0.5rem;
       font-size: 1.1rem;
       color: #cbd5f5;
+    }
+
+    .header-contact {
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      color: #94a3b8;
+    }
+
+    .header-contact a {
+      color: #60a5fa;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    .header-contact a:first-of-type {
+      margin-left: 0;
+    }
+
+    .header-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 650px) {
+      .header-container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .header-text {
+        text-align: center;
+      }
+      .profile-photo {
+        width: 110px;
+        height: 110px;
+      }
     }
 
     /* ---------- NAV ---------- */
@@ -67,6 +119,8 @@
       gap: 1.2rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       z-index: 100;
+      overflow-x: auto;
+      white-space: nowrap;
     }
 
     nav a {
@@ -100,12 +154,12 @@
     }
 
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
     }
 
     h2 {
       font-size: 1.6rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       color: var(--primary);
       border-left: 5px solid var(--accent);
       padding-left: 0.75rem;
@@ -126,12 +180,41 @@
       box-shadow: 0 12px 28px rgba(0,0,0,0.08);
     }
 
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .card-date {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .card-subtitle {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
     ul {
       padding-left: 1.2rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     li {
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.5rem;
     }
 
     a {
@@ -147,14 +230,14 @@
     /* ---------- SKILLS GRID ---------- */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.2rem;
     }
 
     /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
-      padding: 1.2rem;
+      padding: 1.5rem;
       background: var(--primary);
       color: #cbd5f5;
       font-size: 0.9rem;
@@ -167,7 +250,7 @@
       }
 
       nav {
-        flex-wrap: wrap;
+        justify-content: flex-start;
       }
     }
   </style>
@@ -175,194 +258,293 @@
 
 <body>
 
-  <!-- HEADER -->
+<!-- HEADER -->
   <header>
-  <h1>Naga Pranathi Siriyapuraju</h1>
-  <p>Computer Science Undergraduate</p>
-</header>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#extracurricular">Extracurriculars</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="header-container">
+      <div class="header-text">
+        <h1>Naga Pranathi Siriyapuraju</h1>
+        <p>Computer Science Undergraduate</p>
+        <div class="header-contact">
+          📍 Hyderabad, India
+        </div>
+      </div>
+      <img src="SNP.jpeg" alt="Naga Pranathi Siriyapuraju" class="profile-photo" />
+    </div>
+  </header>
 
   <!-- MAIN -->
   <main>
 
-    <section id="home">
-      <h2>Home</h2>
-      <div class="card">
-        Hi, I'm a Computer Science undergraduate passionate about solving real-world problems using data, analytics, and machine learning.
-      </div>
-    </section>
-
+    <!-- ABOUT -->
     <section id="about">
-      <h2>About Me</h2>
+      <h2>Professional Summary</h2>
       <div class="card">
-        I specialize in data-driven problem solving with hands-on experience in Python, Machine Learning, and Data Visualization. I'm actively seeking opportunities to contribute to impactful data science projects.
+        <p style="margin: 0;">
+          I’m a Computer Science undergraduate with a strong grasp and hands-on experience in Data Science, Data Analytics, and Machine Learning, eager to apply Software Development skills in real-world settings. I have developed good leadership skills in the Microsoft Student Chapter. I bring a creative, collaborative, analytical, and problem-solving mindset, along with a willingness to learn and grow.
+        </p>
       </div>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education">
       <h2>Education</h2>
       <div class="card">
-    <strong>Vellore Institute of Technology, Amaravati</strong><br>
-    B.Tech in Computer Science (2023 – Present)<br>
-    CGPA: 8.89/10.0<br>
-    <strong>Relevant Coursework:</strong> Object Oriented Programming, Data Analytics, Machine Learning, Database Management Systems, Data Structures and Algorithms, Design and Analysis of Algorithms, Digital Image Processing
-  </div>
+        <div class="card-header">
+          <span class="card-title">Vellore Institute of Technology, Amaravati</span>
+          <span class="card-date">Sept 2023 – Present</span>
+        </div>
+        <div class="card-subtitle">B.Tech in Computer Science and Engineering | CGPA: 8.83 / 10.0</div>
+        <ul>
+          <li><strong>Relevant Coursework:</strong> Object-Oriented Programming, Data Structures &amp; Algorithms, Database Management Systems, Operating Systems, Computer Networks, Design &amp; Analysis of Algorithms</li>
+          <li><strong>Clubs:</strong> Microsoft Student Chapter, Laetitia.</li>
+        </ul>
+      </div>
 
-  <div class="card">
-    <strong>Sri Chaitanya Junior Kalasala, Hyderabad</strong><br>
-    Class XII: 96.8%<br>
-    JEE Mains: 95.59%
-  </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Sri Chaitanya Junior Kalasala, Hyderabad</span>
+          <span class="card-date">May 2021 – June 2023</span>
+        </div>
+        <div class="card-subtitle">Class XI – XII</div>
+        <div>Percentage: <strong>96.8%</strong></div>
+	<div>JEE Mains Percentile: <strong>95.59</strong></div>
+      </div>
 
-  <div class="card">
-    <strong>Bhavan’s Sri Ramakrishna Vidyalaya</strong><br>
-    Class X: 95.8%
-  </div>
-</section>
-
-<section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="card"><strong>Languages</strong><br>Python, C/C++, Java, R, MATLAB, SQL</div>
-        <div class="card"><strong>Web Development</strong><br>HTML, CSS, JavaScript</div>
-        <div class="card"><strong>Libraries</strong><br>NumPy, Pandas, Matplotlib, Seaborn, SciPy</div>
-        <div class="card"><strong>Tools</strong><br>Linux, Excel, PowerPoint, Overleaf(LaTeX)</div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Bhavan's Sri Ramakrishna Vidyalaya, Hyderabad</span>
+          <span class="card-date">Apr 2011 – Apr 2021</span>
+        </div>
+        <div class="card-subtitle">Class I – X</div>
+        <div>Percentage: <strong>95.8%</strong></div>
       </div>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <strong>Programming Languages</strong><br>
+          Python, Java, R, SQL
+        </div>
+        <div class="card">
+          <strong>Data Analysis &amp; Visualization</strong><br>
+          NumPy, Pandas, SciPy, Matplotlib, Seaborn, Scikit-learn, Excel
+        </div>
+        <div class="card">
+          <strong>Machine Learning</strong><br>
+          Linear &amp; Logistic Regression, Ridge &amp; Lasso Regression, Decision Trees, Random Forests, Gradient Boosting, Support Vector Machines (SVM), Clustering techniques, Basic Bayesian Networks
+        </div>
+        <div class="card">
+          <strong>Database Management</strong><br>
+          MySQL, DBMS
+        </div>
+        <div class="card">
+          <strong>Basic Web Technologies</strong><br>
+          HTML, CSS, JavaScript
+        </div>
+        <div class="card">
+          <strong>Tools &amp; Platforms</strong><br>
+          Git, GitHub, AWS, MATLAB, Overleaf (LaTeX)
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section id="projects">
       <h2>Projects</h2>
 
-<div class="card">
-        <strong>Hangman Game</strong><br>
-        Java-based word guessing game with clean logic and OOP design.
-        <br><a href="https://github.com/psiriyapuraju/Hangman-Game" target="_blank">View on GitHub →</a>
-      </div>
-      
-<div class="card">
-        <strong>Highest Grossing Movies Data Analysis</strong><br>
-        Python-based analysis uncovering trends in global box-office data.
-        <br><a href="https://github.com/psiriyapuraju/Data-Analysis-on-Top-Movies" target="_blank">View on GitHub →</a>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">OptiCrop – Machine Learning-Based Crop Recommendation System</span>
+          <span class="card-date">May 2025</span>
+        </div>
+        <div class="card-subtitle">Python, Scikit-Learn, Pandas, NumPy</div>
+        <p>
+          Designed and trained a multi-class Logistic Regression model on a dataset of 2,200 agricultural records across 7 soil and climate parameters (N, P, K, temperature, humidity, pH, rainfall). Cleaned data and removed statistical outliers via IQR filtering to predict crop suitability across 22 unique varieties with <strong>94.4% accuracy</strong>.
+        </p>
+        <a href="https://github.com/psiriyapuraju/OptiCrop" target="_blank">View on GitHub →</a>
       </div>
 
       <div class="card">
-        <strong>Spotify Data Analysis</strong><br>
-        Exploratory analysis using R to derive insights from music trends.
-        <br><a href="https://github.com/psiriyapuraju/Data-Analysis-of-Spotify-Most-Played-Songs" target="_blank">View on GitHub →</a>
+        <div class="card-header">
+          <span class="card-title">Spotify Music Trends Data Analysis Project</span>
+          <span class="card-date">May 2024</span>
+        </div>
+        <div class="card-subtitle">R, ggplot2, dplyr, tidyr, Exploratory Data Analysis (EDA)</div>
+        <p>
+          Developed an R-based Spotify data analysis project to clean, analyze, and visualize song data, identifying insights about song popularity, genres, and duration using the dplyr library and various visualizations.
+        </p>
+        <a href="https://github.com/psiriyapuraju/Data-Analysis-of-Spotify-Most-Played-Songs" target="_blank">View on GitHub →</a>
       </div>
 
       <div class="card">
-        <strong>OptiCrop</strong><br>
-        ML-based crop recommendation system using soil & weather data.
-        <br><a href="https://github.com/psiriyapuraju/OptiCrop" target="_blank">View on GitHub →</a>
+        <div class="card-header">
+          <span class="card-title">Interactive Hangman Game Application</span>
+          <span class="card-date">May 2024</span>
+        </div>
+        <div class="card-subtitle">Java, Object-Oriented Programming (OOP), Data Structures</div>
+        <p>
+          Developed a command-line puzzle game with character matching and input validation.
+        </p>
+        <a href="https://github.com/psiriyapuraju/Hangman-Game" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Highest Grossing Movies – Data Analysis Project</span>
+          <span class="card-date">December 2023</span>
+        </div>
+        <div class="card-subtitle">Python, Pandas, NumPy, Matplotlib, Data Wrangling</div>
+        <p>
+          Analyzed 20+ years of film industry data to identify trends in release volume, genre distribution, and revenue; cleaned and structured complex datasets to build informative data visualizations.
+        </p>
+        <a href="https://github.com/psiriyapuraju/Data-Analysis-on-Top-Movies" target="_blank">View on GitHub →</a>
       </div>
     </section>
 
-<section id="certifications">
-      <h2>Certifications</h2>
+    <!-- LEADERSHIP -->
+    <section id="leadership">
+      <h2>Leadership Roles</h2>
+
       <div class="card">
+        <div class="card-header">
+          <span class="card-title">Deputy Club Manager – Microsoft Student Chapter</span>
+        </div>
         <ul>
-  <li>
-    <strong>Machine Learning Certification</strong> – SmartBridge & Google for Developers  
-    <br>Hands-on experience in model building, preprocessing, and predictive analytics  
-    <a href="SmartBridge.pdf" target="_blank">View Certificate</a>
-  </li>
+          <li>Promoted through five progressive leadership tiers from <strong>Co-Lead, Lead, Head of External Affairs, and Community Manager to Deputy Club Manager</strong>, demonstrating sustained organizational growth and executive oversight in less than 6 months.</li>
+          <li>Led corporate speaker engagement and event outreach strategy, coordinating with industry tech professionals to launch impactful webinars that expanded chapter visibility.</li>
+        </ul>
+	<div style="margin-top: 1rem; text-align: left;">
+          <a href="Machine Learning.pdf" target="_blank" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.55rem 1.25rem; border-radius: 8px; font-weight: 600; text-decoration: none;">View Certificate</a>
+        </div>
+	</div>
 
-  <li>
-    <strong>AWS Cloud Practitioner</strong>  
-    <br>Knowledge of cloud computing, AWS services, architecture, and security
-<a href="AWS.pdf" target="_blank">View Certificate</a>
-  </li>
-
-  <li>
-    <strong>Data Fundamentals</strong> – IBM SkillsBuild  
-    <br>Foundation in data analysis, visualization, and decision-making
-<a href="IBM.pdf" target="_blank">View Certificate</a>
-  </li>
-</ul>
-      </div>
-    </section>
-
-<section id="achievements">
-      <h2>Achievements</h2>
       <div class="card">
+        <div class="card-header">
+          <span class="card-title">Member – Laetitia Club</span>
+        </div>
         <ul>
-          <li>
-  <strong>Toddlers Startup Idea</strong> recognized under Wadhwani Entrepreneurship Network    
-  <a href="Toddlers.png" target="_blank">View Certificate</a>
-</li>
-
-<li>
-  Secured first-division in Carnatic Music (Vocal) certification
-</li>
+          <li>Contributed to designing promotional materials for the Laetitia Club, a Latin word for joy, to improve people's mental health.</li>
         </ul>
       </div>
     </section>
 
-<section id="leadership">
-  <h2>Leadership Experience</h2>
+<!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <h2>Certifications</h2>
 
-  <div class="card">
-    <strong>Deputy Club Manager – Microsoft Student Chapter</strong><br>
-    Progressed through multiple roles including External Affairs Head and Community Manager
-  </div>
-
-  <div class="card">
-    <strong>Lead, Outreach Team – Microsoft Student Chapter</strong><br>
-    Organized speaker sessions and collaborated with industry professionals
-  </div>
-
-  <div class="card">
-    <strong>Creative Team Member – Laetitia Club</strong><br>
-    Worked on branding and promotional content for events
-  </div>
-</section>
-
-<section id="extracurriculars">
-  <h2>Extracurriculars</h2>
-  <div class="card">
-    • Carnatic music singer<br>
-    • Clay art designer<br>
-    • Badminton player<br>
-    • Participant in Bhagavad Gita competitions
-  </div>
-</section>
-
-    <section id="resume">
-      <h2>Resume</h2>
       <div class="card">
-        <a href="Naga Pranathi Siriyapuraju.pdf" target="_blank">📄 View Resume (PDF)</a>
+        <div class="card-header">
+          <span class="card-title">Data Analysis – Google</span>
+          <span class="card-date">August 2026</span>
+        </div>
+        <ul>
+          <li>Learned the complete data analysis process, including asking the right questions, preparing, cleaning, analyzing, and visualizing data.</li>
+          <li>Applied data analysis concepts using Python to complete a real-world case study.</li>
+        </ul>
+        <div style="margin-top: 1rem; text-align: left;">
+          <a href="Google Data Analytics.pdf" target="_blank" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.55rem 1.25rem; border-radius: 8px; font-weight: 600; text-decoration: none;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Data Analysis with Python – Google</span>
+          <span class="card-date">July 2026</span>
+        </div>
+        <ul>
+          <li>Completed hands-on training in Python for data analysis, covering functions, conditional statements, loops, strings, and Python data structures.</li>
+          <li>Learned to work with raw data, clean datasets, and prepare them for meaningful analysis.</li>
+        </ul>
+        <div style="margin-top: 1rem; text-align: left;">
+          <a href="Google Data Analysis with Python.pdf" target="_blank" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.55rem 1.25rem; border-radius: 8px; font-weight: 600; text-decoration: none;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Machine Learning Certification – SmartBridge and Google for Developers</span>
+          <span class="card-date">May 2025</span>
+        </div>
+        <ul>
+          <li>Learned and implemented supervised and unsupervised machine learning, data preprocessing, feature engineering, and evaluation of machine learning models.</li>
+          <li>Built and evaluated machine learning models using Python and Scikit-learn in OptiCrop project.</li>
+        </ul>
+        <div style="margin-top: 1rem; text-align: left;">
+          <a href="Machine Learning.pdf" target="_blank" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.55rem 1.25rem; border-radius: 8px; font-weight: 600; text-decoration: none;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Classical Carnatic Music – Potti Sreeramulu Telugu University</span>
+          <span class="card-date">December 2021</span>
+        </div>
+        <ul>
+          <li>Certified Carnatic vocalist with First-Division professional distinction.</li>
+          <li>Completed formal university assessment and performance training in Carnatic vocal music.</li>
+        </ul>
       </div>
     </section>
 
+    <!-- ACHIEVEMENTS & HOBBIES -->
+    <section id="achievements">
+      <h2>Hobbies and Achievements</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Classical Carnatic Music:</strong> A passionate Carnatic vocalist with professional certification in Carnatic Vocal music.</li>
+          <li><strong>Academics:</strong> Achieved national-level qualification twice in the competitive Spell Bee.</li>
+          <li><strong>Arts and Crafts:</strong> Creative hobbyist with a talent for making unique mould-it clay and m-seal sculptures.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- LANGUAGES -->
+    <section id="languages">
+      <h2>Languages</h2>
+      <div class="card">
+        <ul>
+	<li><strong>Proficient:</strong> English, Hindi</li>
+	<li><strong>Native:</strong> Telugu</li>
+	</ul>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <h2>Curriculum Vitae (CV)</h2>
+      <div class="card" style="text-align: center; padding: 2rem;">
+        <a href="CV.pdf" target="_blank" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none;">📄 CV (PDF)</a>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="resume">
+      <h2>Resume</h2>
+      <div class="card" style="text-align: center; padding: 2rem;">
+        <a href="Resume.pdf" target="_blank" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none;">📄 Resume (PDF)</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        📧 <a href="mailto:psiriyapuraju@gmail.com" target="_blank">Gmail</a><br>
-        🔗 <a href="https://linkedin.com/in/naga-pranathi-siriyapuraju-147961280" target="_blank">LinkedIn</a><br>
-        🔗 <a href="https://github.com/psiriyapuraju" target="_blank">GitHub</a><br>
-	📱 +91-9502240472<br>
+        <ul>
+          <li>📩 <strong>Email:</strong> <a href="mailto:psiriyapuraju@gmail.com">psiriyapuraju@gmail.com</a></li>
+          <li>🔗 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naga-pranathi-siriyapuraju-147961280" target="_blank">linkedin.com/in/naga-pranathi-siriyapuraju</a></li>
+          <li>🔗 <strong>GitHub:</strong> <a href="https://github.com/psiriyapuraju" target="_blank">github.com/psiriyapuraju</a></li>
+          <li>📞 <strong>Phone:</strong> <a href="tel:+919502240472">+91-9502240472</a></li>
+        </ul>
       </div>
     </section>
 
   </main>
 
   <footer>
-    © 2026 Pranathi. All rights reserved.
+    © 2026 Naga Pranathi Siriyapuraju. All rights reserved.
   </footer>
 
 </body>
