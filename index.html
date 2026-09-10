@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naga Pranathi Siriyapuraju</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #3b82f6;
+      --accent-alt: #14b8a6;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: linear-gradient(135deg, var(--primary), #020617);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    header img {
+      width: 90px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #cbd5f5;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      border-left: 5px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    /* ---------- CARDS ---------- */
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      margin-bottom: 1.2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.7rem;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- SKILLS GRID ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background: var(--primary);
+      color: #cbd5f5;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+  <h1>Naga Pranathi Siriyapuraju</h1>
+  <p>Computer Science Undergraduate</p>
+</header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#extracurricular">Extracurriculars</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <section id="home">
+      <h2>Home</h2>
+      <div class="card">
+        Hi, I'm a Computer Science undergraduate passionate about solving real-world problems using data, analytics, and machine learning.
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        I specialize in data-driven problem solving with hands-on experience in Python, Machine Learning, and Data Visualization. I'm actively seeking opportunities to contribute to impactful data science projects.
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+    <strong>Vellore Institute of Technology, Amaravati</strong><br>
+    B.Tech in Computer Science (2023 – Present)<br>
+    CGPA: 8.89/10.0<br>
+    <strong>Relevant Coursework:</strong> Object Oriented Programming, Data Analytics, Machine Learning, Database Management Systems, Data Structures and Algorithms, Design and Analysis of Algorithms, Digital Image Processing
+  </div>
+
+  <div class="card">
+    <strong>Sri Chaitanya Junior Kalasala, Hyderabad</strong><br>
+    Class XII: 96.8%<br>
+    JEE Mains: 95.59%
+  </div>
+
+  <div class="card">
+    <strong>Bhavan’s Sri Ramakrishna Vidyalaya</strong><br>
+    Class X: 95.8%
+  </div>
+</section>
+
+<section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="card"><strong>Languages</strong><br>Python, C/C++, Java, R, MATLAB, SQL</div>
+        <div class="card"><strong>Web Development</strong><br>HTML, CSS, JavaScript</div>
+        <div class="card"><strong>Libraries</strong><br>NumPy, Pandas, Matplotlib, Seaborn, SciPy</div>
+        <div class="card"><strong>Tools</strong><br>Linux, Excel, PowerPoint, Overleaf(LaTeX)</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+<div class="card">
+        <strong>Hangman Game</strong><br>
+        Java-based word guessing game with clean logic and OOP design.
+        <br><a href="https://github.com/psiriyapuraju/Hangman-Game" target="_blank">View on GitHub →</a>
+      </div>
+      
+<div class="card">
+        <strong>Highest Grossing Movies Data Analysis</strong><br>
+        Python-based analysis uncovering trends in global box-office data.
+        <br><a href="https://github.com/psiriyapuraju/Data-Analysis-on-Top-Movies" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <strong>Spotify Data Analysis</strong><br>
+        Exploratory analysis using R to derive insights from music trends.
+        <br><a href="https://github.com/psiriyapuraju/Data-Analysis-of-Spotify-Most-Played-Songs" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <strong>OptiCrop</strong><br>
+        ML-based crop recommendation system using soil & weather data.
+        <br><a href="https://github.com/psiriyapuraju/OptiCrop" target="_blank">View on GitHub →</a>
+      </div>
+    </section>
+
+<section id="certifications">
+      <h2>Certifications</h2>
+      <div class="card">
+        <ul>
+  <li>
+    <strong>Machine Learning Certification</strong> – SmartBridge & Google for Developers  
+    <br>Hands-on experience in model building, preprocessing, and predictive analytics  
+    <a href="SmartBridge.pdf" target="_blank">View Certificate</a>
+  </li>
+
+  <li>
+    <strong>AWS Cloud Practitioner</strong>  
+    <br>Knowledge of cloud computing, AWS services, architecture, and security
+<a href="AWS.pdf" target="_blank">View Certificate</a>
+  </li>
+
+  <li>
+    <strong>Data Fundamentals</strong> – IBM SkillsBuild  
+    <br>Foundation in data analysis, visualization, and decision-making
+<a href="IBM.pdf" target="_blank">View Certificate</a>
+  </li>
+</ul>
+      </div>
+    </section>
+
+<section id="achievements">
+      <h2>Achievements</h2>
+      <div class="card">
+        <ul>
+          <li>
+  <strong>Toddlers Startup Idea</strong> recognized under Wadhwani Entrepreneurship Network    
+  <a href="Toddlers.png" target="_blank">View Certificate</a>
+</li>
+
+<li>
+  Secured first-division in Carnatic Music (Vocal) certification
+</li>
+        </ul>
+      </div>
+    </section>
+
+<section id="leadership">
+  <h2>Leadership Experience</h2>
+
+  <div class="card">
+    <strong>Deputy Club Manager – Microsoft Student Chapter</strong><br>
+    Progressed through multiple roles including External Affairs Head and Community Manager
+  </div>
+
+  <div class="card">
+    <strong>Lead, Outreach Team – Microsoft Student Chapter</strong><br>
+    Organized speaker sessions and collaborated with industry professionals
+  </div>
+
+  <div class="card">
+    <strong>Creative Team Member – Laetitia Club</strong><br>
+    Worked on branding and promotional content for events
+  </div>
+</section>
+
+<section id="extracurriculars">
+  <h2>Extracurriculars</h2>
+  <div class="card">
+    • Carnatic music singer<br>
+    • Clay art designer<br>
+    • Badminton player<br>
+    • Participant in Bhagavad Gita competitions
+  </div>
+</section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <div class="card">
+        <a href="Naga Pranathi Siriyapuraju.pdf" target="_blank">📄 View Resume (PDF)</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        📧 <a href="mailto:psiriyapuraju@gmail.com" target="_blank">Gmail</a><br>
+        🔗 <a href="https://linkedin.com/in/naga-pranathi-siriyapuraju-147961280" target="_blank">LinkedIn</a><br>
+        🔗 <a href="https://github.com/psiriyapuraju" target="_blank">GitHub</a><br>
+	📱 +91-9502240472<br>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Pranathi. All rights reserved.
+  </footer>
+
+</body>
+</html>
